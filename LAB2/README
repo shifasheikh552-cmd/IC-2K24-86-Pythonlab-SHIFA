@@ -1,0 +1,147 @@
+1. Armstrong Number
+
+Aim:
+To check whether a given number is an Armstrong number and display all Armstrong numbers within a given range.
+
+Logic:
+The digits of the number are separated and each digit is raised to the power of the total number of digits. If the sum is equal to the original number, it is an Armstrong number. A loop is used to find Armstrong numbers within a range.
+
+Sample Input:
+
+153
+100
+500
+
+Sample Output:
+
+153 is an Armstrong number
+Armstrong numbers in the range:
+153 370 371 407
+2. Prime Number
+
+Aim:
+To check whether a given number is prime and display all prime numbers up to a given limit.
+
+Logic:
+A prime number has exactly two factors: 1 and itself. The number is tested for divisibility only up to its square root, which reduces unnecessary checks.
+
+Sample Input:
+
+29
+20
+
+Sample Output:
+
+29 is a prime number
+Prime numbers up to 20:
+2 3 5 7 11 13 17 19
+3. Perfect Number
+
+Aim:
+To check whether a number is a perfect number and display all perfect numbers up to a given limit.
+
+Logic:
+A perfect number is equal to the sum of all its proper divisors. The program finds the divisors of each number and compares their sum with the original number.
+
+Sample Input:
+
+28
+1000
+
+Sample Output:
+
+28 is a perfect number
+Perfect numbers up to 1000:
+6 28 496
+4. Palindrome
+
+Aim:
+To check whether a number and a string are palindromes.
+
+Logic:
+For a number, the reverse is calculated using arithmetic operations without converting the number to a string. For a string, characters from both ends are compared until the middle is reached.
+
+Sample Input:
+
+1221
+madam
+
+Sample Output:
+
+1221 is a palindrome
+madam is a palindrome
+5. Fibonacci Series
+
+Aim:
+To generate the Fibonacci series using both looping and recursion.
+
+Logic:
+In the loop version, each new Fibonacci term is calculated using the previous two terms. In the recursive version, the function calls itself to calculate the previous two Fibonacci values. The recursive version performs more repeated calculations.
+
+Sample Input:
+
+10
+
+Sample Output:
+
+Fibonacci using loop:
+0 1 1 2 3 5 8 13 21 34
+
+Fibonacci using recursion:
+0 1 1 2 3 5 8 13 21 34
+6. Pattern Printing
+
+Aim:
+To print different patterns using nested loops.
+
+Logic:
+Nested loops are used where the outer loop controls the rows and the inner loop controls the number of stars, numbers, or spaces printed in each row.
+
+The program prints:
+
+Right triangle star pattern
+Number pattern
+Centered pyramid pattern
+
+Sample Input:
+
+5
+
+Sample Output:
+
+Star Pattern:
+*
+* *
+* * *
+* * * *
+* * * * *
+
+Number Pattern:
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+
+Pyramid Pattern:
+        *
+      * * *
+    * * * * *
+  * * * * * * *
+* * * * * * * * *
+7. Menu-Driven Application
+
+Aim:
+To combine the different Python programs into a single menu-driven application.
+
+Logic:
+A menu is displayed to the user with different program options. The selected operation is executed using functions, and the menu continues until the user chooses the exit option. Invalid choices are handled without terminating the program.
+
+Sample Input:
+
+Enter your choice: 2
+Enter a number: 29
+
+Sample Output:
+
+29 is a prime number
