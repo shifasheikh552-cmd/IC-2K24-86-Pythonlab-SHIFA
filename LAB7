@@ -1,0 +1,89 @@
+#TIME AND SPACE COMPLEXITY ANALYSIS
+
+Snippet 1: find_max
+Time: O(n) | Space: O(1)
+Justification: Single linear scan, only one variable stored.
+
+Snippet 2: has_duplicate
+Time: O(n^2) | Space: O(1)
+Justification: Nested loops compare every pair, no extra DS.
+
+Snippet 3: sum_digits
+Time: O(d) = O(log n) | Space: O(d)
+Justification: One recursive call per digit, recursion stack = d.
+
+Snippet 4: print_pairs
+Time: O(n^2) | Space: O(n^2)
+Justification: n*n iterations storing n^2 pairs.
+
+Snippet 5: binary_search
+Time: O(log n) | Space: O(1)
+Justification: Halves search space each time, only pointers used.
+
+Snippet 6: matrix_multiply
+Time: O(n^3) | Space: O(n^2)
+Justification: Three nested loops for n x n, result is n^2.
+
+Snippet 7: to_sparse
+Time: O(m*n) | Space: O(k)
+Justification: Visits all m*n cells, stores only k non-zero elements.
+
+Snippet 8: process
+Time: O(n + n^2) = O(n^2)
+Justification: First loop O(n) + nested loop O(n^2).
+
+Snippet 9: check_first_ten
+Time: O(n)
+Justification: Inner loop constant 10, so 10*n = O(n).
+
+Snippet 10: reverse_new
+Time: O(n) | Space: O(n)
+Justification: One pass copies n elements to new array.
+
+Snippet 11: reverse_in_place
+Time: O(n) | Space: O(1)
+Justification: Swaps n/2 times in-place, no extra array.
+
+Snippet 12: factorial
+Time: O(n) | Space: O(n)
+Justification: n recursive calls, stack depth n.
+
+Snippet 13: fibonacci
+Time: O(2^n) | Space: O(n)
+Justification: Exponential recursive tree, stack depth n.
+
+Snippet 14: count_pairs_with_sum
+Time: O(n) | Space: O(n)
+Justification: Single pass with hash set O(1) lookup.
+
+Snippet 15: print_all_subsets
+Time: O(n * 2^n)
+Justification: 2^n subsets, each checks n bits.
+
+Snippet 16: merge_sorted
+Time: O(n+m) | Space: O(n+m)
+Justification: Each element visited once, stored in new list.
+
+Snippet 17: is_palindrome
+Time: O(n) | Space: O(n)
+Justification: s[::-1] creates reversed copy of size n.
+
+Snippet 18: flatten
+Time: O(m*n) | Space: O(m*n)
+Justification: Visits all m*n elements, stores them.
+
+Snippet 19: power
+Time: O(exp) | Space: O(exp)
+Justification: One recursive call per decrement.
+
+Snippet 20: fast_power
+Time: O(log exp) | Space: O(log exp)
+Justification: Halves exponent each call.
+
+Snippet 21: has_common_element
+Time: O(n*m) | Space: O(1)
+Justification: Compares every element of a with b in worst case.
+
+Snippet 22: build_frequency_map
+Time: O(n) | Space: O(n)
+Justification: Single pass, map stores up to n unique keys
