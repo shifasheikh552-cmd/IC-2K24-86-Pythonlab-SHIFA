@@ -1,1 +1,153 @@
+#1. ATM Simulation
+Aim:To build a menu-driven ATM system with PIN verification, balance check, deposit, withdraw, and PIN change.
+Logic:
+1. Verify user with fixed PIN (1234) with 3 attempts before showing menu.
+2. Use loop for menu: Check Balance / Deposit / Withdraw (reject if amount > balance) / Change PIN / Exit.
+3. Use functions for each operation and try-except to handle invalid input without crashing.
+Sample Input / Output:
+Enter your 4-digit PIN: 1234
+PIN verified successfully.
 
+------ ATM MENU ------
+1. Check Balance
+2. Deposit
+3. Withdraw
+4. Change PIN
+5. Exit
+Choose an option (1-5): 1
+
+Your current balance is: Rs. 10000.0
+
+Choose an option (1-5): 3
+Enter amount to withdraw: 12000
+Error: Insufficient balance. Withdrawal rejected.
+
+Choose an option (1-5): 3
+Enter amount to withdraw: 2000
+Rs. 2000.0 withdrawn successfully.
+
+Choose an option (1-5): 5
+Thank you for using ATM. Goodbye!
+
+#2.Student Grade Calculator
+Aim:To build a menu-driven program to enter marks of 5 subjects, calculate average, assign grade, and view last entered student data.
+Logic:
+1.  Menu has 3 options: Enter marks, View last student, Exit. Store last student data in a dictionary.
+2.  Take 5 subject marks (0-100 validated), calculate total and average = total/5.
+3.  Assign grade by scheme: >=90 A+, >=80 A, >=70 B, >=60 C, >=50 D, else F.
+
+Sample Input / Output:
+
+------ STUDENT GRADE CALCULATOR ------
+1. Enter marks for a new student
+2. View grade of last entered student
+3. Exit
+Choose an option (1-3): 1
+Enter student name: Shifa
+Enter marks for 5 subjects (out of 100):
+  Subject 1: 85
+  Subject 2: 92
+  Subject 3: 78
+  Subject 4: 88
+  Subject 5: 90
+
+Data saved! Shifa's Average: 86.60, Grade: A
+
+Choose an option (1-3): 2
+
+--- Last Entered Student ---
+Name    : Shifa
+Marks   : [85.0, 92.0, 78.0, 88.0, 90.0]
+Total   : 433.0/500
+Average : 86.60
+Grade   : A
+
+#3.Reverse Guessing Game
+Aim:To build a game where user thinks of a secret number and computer guesses it using binary search.
+Logic:
+1. Take range (low, high) from user and calculate mid = (low+high)//2 as computer's guess.
+2. If user says too high -> set high = guess-1, if too low -> set low = guess+1.
+3. Repeat until correct, counting total guesses. Detect invalid range if user gives wrong hints.
+Sample Input / Output:
+
+--- Reverse Guessing Game ---
+Think of a number and I (computer) will guess it!
+Enter lower bound (e.g., 1): 1
+Enter upper bound (e.g., 100): 100
+
+Great! Think of a number between 1 and 100. Don't tell me!
+Press Enter when you are ready...
+
+My guess #1 is: 50
+Is it (H)igh, (L)ow, or (C)orrect? : l
+
+My guess #2 is: 75
+Is it (H)igh, (L)ow, or (C)orrect? : h
+
+My guess #3 is: 62
+Is it (H)igh, (L)ow, or (C)orrect? : c
+
+Yay! I guessed your number 62 in 3 attempts!
+
+#4.Guessing game with hints and scoring
+Aim:To build a guessing game where computer picks a random number and user guesses it with extra hints and a scoring system.
+Logic:
+1. Computer picks secret number from 1-100, user starts with 100 points and gets 7 attempts.
+2. On wrong guess, deduct 10 points and give hints: if secret is EVEN/ODD and if it is multiple of 5.
+3. If guessed correctly, show final score; if attempts over, show "you lost" and score 0.
+Sample Input / Output:
+
+--- Guessing Game with Hints & Scoring ---
+I have picked a number between 1 and 100.
+You have 7 attempts. Starting Score: 100
+
+Attempt 1/7 | Score: 100
+Enter your guess (1-100): 50
+Too LOW!
+Hint: Number is ODD and is a multiple of 5
+
+Attempt 2/7 | Score: 90
+Enter your guess (1-100): 75
+Correct! The number was 75.
+You guessed it in 2 attempt(s).
+Final Score: 90
+
+#5. Combined Application - ATM + Grade Calculator + Guessing Game
+Aim:To merge ATM Simulation, Student Grade Calculator, and Guessing Game with Hints & Scoring into one top-level menu-driven application where each program runs independently and returns to main menu on exit.
+Logic:
+1. Create `main()` with infinite loop showing Main Menu: 1. ATM, 2. Grade Calculator, 3. Guessing Game, 4. Exit.
+2. Put logic of each program in its own function `run_atm()`, `run_grade_calculator()`, `run_guessing_game()` with its own internal menu/loop.
+3. When user selects Exit/Back option inside any sub-program, `break` returns control to `main()` loop instead of closing the whole app.
+Sample Input / Output:
+
+========== MAIN MENU ==========
+1. ATM Simulation
+2. Student Grade Calculator
+3. Guessing Game with Hints & Scoring
+4. Exit
+Choose an option (1-4): 1
+
+--- Welcome to ATM ---
+Enter your 4-digit PIN: 1234
+PIN verified successfully.
+
+------ ATM MENU ------
+1. Check Balance
+2. Deposit
+3. Withdraw
+4. Change PIN
+5. Back to Main Menu
+Choose (1-5): 1
+Your current balance is: Rs. 10000.0
+Choose (1-5): 5
+Exiting ATM to Main Menu...
+
+========== MAIN MENU ==========
+1. ATM Simulation
+2. Student Grade Calculator
+3. Guessing Game with Hints & Scoring
+4. Exit
+Choose an option (1-4): 4
+Thank you! Exiting Combined Application.
+
+                                      *****************************
