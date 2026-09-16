@@ -1,0 +1,24 @@
+### LOGIC
+This is a concentric square pattern. The number printed at any position depends on its distance from the outer border.
+
+1.  Let the maximum number be `n = 4`.
+2.  The total size of the matrix will be `size = 2*n - 1 = 7`.
+3.  For each cell `(i, j)`, we find its minimum distance from all 4 borders:
+    `d = min(i, j, size-1-i, size-1-j)`
+4.  The value to be printed is `value = n - d`
+    - At border `d=0` -> 4
+    - Next layer `d=1` -> 3
+    - Next layer `d=2` -> 2
+    - Center `d=3` -> 1
+
+### ALGORITHM
+1.  START
+2.  Initialize `n = 4`
+3.  Calculate `size = 2*n - 1`
+4.  Loop `i` from 0 to size-1
+5.  Loop `j` from 0 to size-1
+6.  Calculate `d = min(i, j, size-1-i, size-1-j)`
+7.  Print `n-d` without newline
+8.  After inner loop, print newline
+9.  END
+    print()
